@@ -40,7 +40,7 @@ public class ChestOpening : MonoBehaviour
         chestOpen = true;
         ChestAudioSource.PlayOneShot(OpeningSound, volume);
         collectParticle.Play();
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(8.4f);
         GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
         GetItem();
     }
