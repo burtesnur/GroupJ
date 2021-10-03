@@ -12,6 +12,8 @@ using UnityEngine;
 
         public GameObject melting_object;
         Vector3 scaleChange;
+        Vector3 pos;
+        float yPos;
 
         public Collider triggerZone;
 
@@ -20,6 +22,8 @@ using UnityEngine;
         void Start()
         {
             scaleChange = new Vector3(-0.005f, -0.005f, -0.005f) * melting_speed;
+            //yPos = scaleChange[1] / 2;
+            pos = new Vector3(0, 0.005f * melting_speed/2, 0);
         }
 
         // Update is called once per frame
@@ -28,6 +32,7 @@ using UnityEngine;
             if (melting && melted_signal > 0f)
             {
                 melting_object.transform.localScale += scaleChange;
+                melting_object.transform.position -= pos;
                 melted_signal = melting_object.transform.localScale.x;
 
             }

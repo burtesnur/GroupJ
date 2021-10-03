@@ -37,11 +37,11 @@ public class ChestOpening : MonoBehaviour
     IEnumerator stopOpening()
     {
         //play the collect graphics
+        chestOpen = true;
         ChestAudioSource.PlayOneShot(OpeningSound, volume);
         collectParticle.Play();
         yield return new WaitForSeconds(8f);
         GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
-        chestOpen = true;
         GetItem();
     }
 
