@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8399969103957854175}
-  - component: {fileID: 3623773270073173957}
+  - component: {fileID: 1980667970145056814}
+  - component: {fileID: 5953664297013321893}
   m_Layer: 0
   m_Name: FireP2.0
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3623773270073173957
+--- !u!114 &1980667970145056814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,28 +42,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 1759406166358747400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de99b30e1e73fd14e98cc5371da25d12, type: 3}
+  m_Script: {fileID: 11500000, guid: 1962d3d25050a4a44819b089007baf39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 0.2
-  Root: {fileID: 7328339691894642732}
-  Tip: {fileID: 4838516581679106591}
-  MaxLifeTime: 5
-  ImpactVfx: {fileID: 8629190529329413375, guid: 57bd06479bf016943abc9ca12d7ca28b,
+--- !u!114 &5953664297013321893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759406166358747400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a4ee3493c13764fb7a3da63b2c15e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 0.01
+  root: {fileID: 7328339691894642732}
+  tip: {fileID: 4838516581679106591}
+  maxLifeTime: 5
+  impactVFX: {fileID: 8629190529329413375, guid: 57bd06479bf016943abc9ca12d7ca28b,
     type: 3}
-  ImpactVfxLifetime: 3
-  ImpactVfxSpawnOffset: 0.01
-  ImpactSfxClip: {fileID: 0}
-  HittableLayers:
+  impactVFXLifetime: 5
+  impactVFXSpawnOffset: 0.1
+  impactSFXClip: {fileID: 0}
+  hittableLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  Speed: 20
-  GravityDownAcceleration: 0
-  TrajectoryCorrectionDistance: -1
-  InheritWeaponVelocity: 0
-  Damage: 40
-  AreaOfDamage: {fileID: 0}
-  RadiusColor: {r: 0, g: 0.2, b: 0.2, a: 0.2}
+  speed: 20
+  gravityDownAcceleration: 0
+  trajectoryCorrectionDistance: -1
+  inheritWeaponVelocity: 0
+  damage: 40
+  areaOfDamage: {fileID: 0}
+  radiusColor: {r: 0, g: 0.2, b: 0.2, a: 0.2}
 --- !u!1 &8988998964429668622
 GameObject:
   m_ObjectHideFlags: 0
