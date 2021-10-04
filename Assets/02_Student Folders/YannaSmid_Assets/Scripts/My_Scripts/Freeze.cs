@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Unity.FPS.Gameplay
-{
+//namespace Unity.FPS.Gameplay
+//{
 
     public class Freeze : MonoBehaviour
     {
         public float FrozenTimer = 5f;
         private float defaultFrozenTimer;
 
-        bool isFrozen = false;
+        public bool isFrozen = false;
 
         public Collider TriggerZone;
 
@@ -58,4 +58,4 @@ namespace Unity.FPS.Gameplay
         }
 
     }
-}
+//}
