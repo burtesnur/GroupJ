@@ -6,8 +6,9 @@ public class falling : MonoBehaviour
 {
     public float fallSpeed = 8.0f;
     public Collider triggerZone;
-    bool isfalling = false;
     private Rigidbody rb;
+    public Health playerHealth;
+    public float damageTaken = 50f;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,11 @@ public class falling : MonoBehaviour
         {
             print("ground");
             Destroy(this.gameObject);
+        }else{
+            playerHealth.TakeDamage(damageTaken, this.gameObject);
+
+            Destroy(this.gameObject);
         }
+        
     }
 }
