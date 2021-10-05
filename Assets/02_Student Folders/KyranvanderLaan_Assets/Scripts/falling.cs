@@ -7,27 +7,36 @@ public class falling : MonoBehaviour
     public float fallSpeed = 8.0f;
     public Collider triggerZone;
     bool isfalling = false;
+    private Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
-        getComponent<Collider>();
         print("Hello");
+        rb = GetComponent<Rigidbody>();
+        rb.useGravity = false; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isfalling){
-            transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        {
+            print("Yes");
+            rb.useGravity = true;
         }
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision box)
     {
-        print("Yes");
-        isfalling = true;
-        if(collision.gameObject.tag != "Player"){
-            Destroy(gameObject);
+        if(box.gameObject.tag != "Player")
+        {
+            print("ground");
+            Destroy(this.gameObject);
         }
     }
 }
