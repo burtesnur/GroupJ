@@ -7,19 +7,21 @@ using UnityEngine;
 
     public class Freeze : MonoBehaviour
     {
-        public float FrozenTimer = 5f;
-        private float defaultFrozenTimer;
+        private float FrozenTimer;
+        public float TimerLength = 3f;
 
         public bool isFrozen = false;
-
+       
         public Collider TriggerZone;
+
+        public AudioSource freezingSFX;
 
         private PlayerCharacterController Frozen;
 
         // Start is called before the first frame update
         void Start()
         {
-            defaultFrozenTimer = FrozenTimer;
+            TriggerZone = GetComponent<Collider>();
         }
 
         // Update is called once per frame
@@ -36,12 +38,13 @@ using UnityEngine;
         {
             Frozen = other.GetComponent<PlayerCharacterController>();
             
-            //if (Frozen == null) return;
+            if (Frozen == null) return;
 
-            if (!isFrozen && FrozenTimer > 0f)
+            if (!isFrozen)
             {
-                
+                freezingSFX.Play();
                 isFrozen = true;
+                FrozenTimer = TimerLength;
                 Frozen.enabled = false;
             }
         }
@@ -53,7 +56,6 @@ using UnityEngine;
                 Debug.Log("Freeze B*tch");
                 isFrozen = false;
                 Frozen.enabled = true;
-                FrozenTimer = defaultFrozenTimer;
             }
         }
 
