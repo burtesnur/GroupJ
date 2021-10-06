@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ice : MonoBehaviour
 {
     public bool OnIce = false;
-
+    public Collider triggerZone;
     public PlayerCharacterController Slip;
 
     void Start()
@@ -22,14 +22,21 @@ public class Ice : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision box)
+    private void OnTriggerEnter(Collider box)
     {
         if(box.gameObject.tag == "Player")
         {
-            print("Onice");
             OnIce = true;
         }
-        print("Onice");
+       
+    }
+
+    private void OnTriggerExit(Collider box)
+    {
+        if(box.gameObject.tag == "Player")
+        {
+            OnIce = false;
+        }
        
     }
 }
