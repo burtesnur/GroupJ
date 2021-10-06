@@ -27,7 +27,6 @@ public class falling : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            print("Yes");
             rb.useGravity = true;
         }
     }
@@ -36,7 +35,6 @@ public class falling : MonoBehaviour
     {
         if(box.gameObject.tag != "Player")
         {
-            print("ground");
             Destroy(this.gameObject);
         }else{
             playerHealth.TakeDamage(damageTaken, this.gameObject);
