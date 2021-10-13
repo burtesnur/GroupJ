@@ -93,7 +93,8 @@ MonoBehaviour:
   bobbingAmount: 1
   rotatingSpeed: 360
   pickupSFX: {fileID: 0}
-  pickupVFXPrefab: {fileID: 0}
+  pickupVFXPrefab: {fileID: 7425561648268028001, guid: d931f1e647dc4cd40a1831eff45a6688,
+    type: 3}
 --- !u!1 &7696458092355651969
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,22 +156,22 @@ PrefabInstance:
     - target: {fileID: 6303774889919848342, guid: d931f1e647dc4cd40a1831eff45a6688,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6303774889919848342, guid: d931f1e647dc4cd40a1831eff45a6688,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6303774889919848342, guid: d931f1e647dc4cd40a1831eff45a6688,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6303774889919848342, guid: d931f1e647dc4cd40a1831eff45a6688,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6303774889919848342, guid: d931f1e647dc4cd40a1831eff45a6688,
         type: 3}
@@ -180,7 +181,7 @@ PrefabInstance:
     - target: {fileID: 6303774889919848342, guid: d931f1e647dc4cd40a1831eff45a6688,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6303774889919848342, guid: d931f1e647dc4cd40a1831eff45a6688,
         type: 3}
