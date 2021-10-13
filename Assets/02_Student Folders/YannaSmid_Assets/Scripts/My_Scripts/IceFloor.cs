@@ -27,8 +27,8 @@ public class IceFloor : MonoBehaviour
     {
         s_player = other.GetComponent<PlayerCharacterController>();
 
-        if (s_player == null) return;
-        
+        //if (s_player == null) return;
+
         s_player.maxSpeedOnGround = SlippingSpeed;
         s_player.movementSharpnessOnGround = resistance;
 
