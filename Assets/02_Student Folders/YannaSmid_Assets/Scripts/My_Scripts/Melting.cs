@@ -31,6 +31,7 @@ using UnityEngine;
         {
             if (melting && melted_signal > 0f)
             {
+                Debug.Log("Object is metling");
                 melting_object.transform.localScale += scaleChange;
                 melting_object.transform.position -= pos;
                 melted_signal = melting_object.transform.localScale.x;
