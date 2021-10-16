@@ -9,11 +9,15 @@ public class falling : MonoBehaviour
     private Rigidbody rb;
     public Health playerHealth;
     public float damageTaken = 50f;
+    public AudioSource breakingIce;
+    private bool AudioPlayed = false;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false; 
+        breakingIce = GetComponent<AudioSource> ();
+        breakingIce.time = 0.2f;
     }
 
     // Update is called once per frame
@@ -27,6 +31,12 @@ public class falling : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             rb.useGravity = true;
+            if(!AudioPlayed)
+            {
+                breakingIce.Play ();
+                AudioPlayed = true;
+            }
+            
         }
     }
 
