@@ -9,6 +9,7 @@ public class Drug : MonoBehaviour
 
     public PlayerCharacterController Speed;
     public PlayerWeaponsManager Weapon;
+    public AudioSource DrugMusic;
     public Collider pickupTrigger;
     public float timer = 10f;
 
@@ -48,6 +49,7 @@ public class Drug : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Drugged = true;
+            DrugMusic.Play();
             this.gameObject.transform.localScale = new Vector3(0, 0, 0);
         }
        
