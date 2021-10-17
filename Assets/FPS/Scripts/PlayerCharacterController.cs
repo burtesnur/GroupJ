@@ -69,6 +69,7 @@ public class PlayerCharacterController : MonoBehaviour
     public AudioClip landSFX;
     [Tooltip("Sound played when taking damage froma fall")]
     public AudioClip fallDamageSFX;
+    
 
     [Header("Fall Damage")]
     [Tooltip("Whether the player will recieve damage when hitting the ground at high speed")]
