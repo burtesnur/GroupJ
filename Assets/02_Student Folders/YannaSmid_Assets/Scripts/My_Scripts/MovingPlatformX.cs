@@ -15,8 +15,9 @@ public class MovingPlatformX : MonoBehaviour
 
     public Transform plateau;
 
-    public Vector3 startingPos = new Vector3(-49.7f, -1f, 3.5f);
-    public Vector3 endPos = new Vector3(-42f, -1f, 3.5f);
+
+    public Vector3 startingPos = new Vector3(-49.7f, -1f, 3.75f);
+    public Vector3 endPos = new Vector3(-42f, -1f, 3.75f);
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +34,7 @@ public class MovingPlatformX : MonoBehaviour
 
         if (movingforward)
         {
-            plateau.Translate(Vector3.right * Time.deltaTime * speed * direction);
+            plateau.position += new Vector3(1f * Time.deltaTime * speed * direction,0,0);
         }
         //if the plateau is waiting to go back
         else if (!movingforward && timer > 0f && !movingbackward)
@@ -53,7 +54,7 @@ public class MovingPlatformX : MonoBehaviour
         }
         if (movingbackward)
         {
-            plateau.Translate(Vector3.right * Time.deltaTime * speed * -direction);
+            plateau.position += new Vector3(1f * Time.deltaTime * speed * -direction,0,0);
         }
         else if (!movingbackward && timer > 0f && !movingforward)
         {
