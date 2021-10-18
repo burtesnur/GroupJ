@@ -46,6 +46,7 @@ public class PostProcess_drug : MonoBehaviour
             After = false;
             _Vignette.intensity.value = 0;
             _ColorGrading.saturation.value = 0;
+            timer = 10f;
         }
 
     }
