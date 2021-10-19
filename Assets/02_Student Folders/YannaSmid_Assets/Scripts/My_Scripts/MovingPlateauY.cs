@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatformX : MonoBehaviour
+public class MovingPlateauY : MonoBehaviour
 {
     public int direction = 1;
     public float speed = 1f;
@@ -27,14 +27,14 @@ public class MovingPlatformX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (plateau.position.x >= endPos.x)
+        if (plateau.position.y >= endPos.y)
         {
             movingforward = false;
         }
 
         if (movingforward)
         {
-            plateau.position += new Vector3(1f * Time.deltaTime * speed * direction,0,0);
+            plateau.position += new Vector3(0,1f * Time.deltaTime * speed * direction,0);
         }
         //if the plateau is waiting to go back
         else if (!movingforward && timer > 0f && !movingbackward)
@@ -48,13 +48,13 @@ public class MovingPlatformX : MonoBehaviour
             timer = timerlength;
         }
         //same goes for moving backwards
-        if (plateau.position.x <= startingPos.x)
+        if (plateau.position.y <= startingPos.y)
         {
             movingbackward = false;
         }
         if (movingbackward)
         {
-            plateau.position += new Vector3(1f * Time.deltaTime * speed * -direction,0,0);
+            plateau.position += new Vector3(0,1f * Time.deltaTime * speed * -direction,0);
         }
         else if (!movingbackward && timer > 0f && !movingforward)
         {
