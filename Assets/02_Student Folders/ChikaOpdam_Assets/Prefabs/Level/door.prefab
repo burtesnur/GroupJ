@@ -92,7 +92,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 32c5a6e1818e44a4eb2adb18c520f029, type: 3}
+  - {fileID: 4207004181067420920, guid: 6bb040ac43e59f94d8f6707a9af4cc39, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,8 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1417821688572252615}
   - component: {fileID: 1452309919503556032}
-  - component: {fileID: 1452309919503556035}
-  - component: {fileID: 1452309919503556034}
+  - component: {fileID: 5205995324006871262}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -176,13 +175,13 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 376b1641ccbb0e544a10a44427fe675d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1452309919503556035
+--- !u!114 &5205995324006871262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,21 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b6fa3753648ec40bc1ed5fe7262d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorColor: {r: 0, g: 0, b: 0, a: 0}
   isOpen: 1
---- !u!114 &1452309919503556034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794347987200232317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69832b635f3658d4a80af2e21f024846, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groupColor: 1
+  openSFX: {fileID: 0}
 --- !u!1 &6681200189705791740
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +336,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 32c5a6e1818e44a4eb2adb18c520f029, type: 3}
+  - {fileID: 4207004181067420920, guid: 6bb040ac43e59f94d8f6707a9af4cc39, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
