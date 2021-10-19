@@ -13,15 +13,15 @@ public class AutomaticOpening : MonoBehaviour
     bool closing = false;
 
     float timer;
-    float timerlength = 1f;
+    public float timerlength = 1f;
 
     public Transform door1;
     public Transform door2;
 
     public Collider triggerZone;
 
-    Vector3 door1DefaultPos = new Vector3(0, 0, 0);
-    Vector3 door2DefaultPos = new Vector3(0, 0, -3);
+    Vector3 door1DefaultPos = new Vector3(0, 0, 0.3f);
+    Vector3 door2DefaultPos = new Vector3(1.9f, 0, 0.3f);
 
     // Start is called before the first frame update
     void Start()

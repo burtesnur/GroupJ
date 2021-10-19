@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Drug : MonoBehaviour
 {
-    public bool Drugged = false;
+    private bool Drugged = false;
+    private bool After = false;
 
-    public PlayerCharacterController Slow;
+    public PlayerCharacterController Speed;
+    public PlayerWeaponsManager Weapon;
+    public AudioSource DrugMusic;
     public Collider pickupTrigger;
-    private Rigidbody pickupRigidbody;
     public float timer = 10f;
 
     void Start()
     {
-        pickupRigidbody = GetComponent<Rigidbody>();
         pickupTrigger = GetComponent<Collider>();
     }
 
@@ -21,11 +22,24 @@ public class Drug : MonoBehaviour
     void Update()
     {
         if(Drugged && timer > 0f){
-            Slow.maxSpeedOnGround = 20f;
+            Speed.maxSpeedOnGround = 20f;
+            Speed.maxSpeedInAir = 20f;
+            Weapon.bobFrequency = 20f;
             timer -= Time.deltaTime;
         }else if(Drugged){
             Drugged = false;
-            Slow.maxSpeedOnGround = 10f;
+            After = true;
+        }
+        if(After && timer > -10f){
+            Speed.maxSpeedOnGround = 5f;
+            Speed.maxSpeedInAir = 5f;
+            Weapon.bobFrequency = 5f;
+            timer -= Time.deltaTime;
+        }else if(After){
+            After = false;
+            Speed.maxSpeedOnGround = 10f;
+            Speed.maxSpeedInAir = 10f;
+            Weapon.bobFrequency = 10f;
             Destroy(this.gameObject);
         }
     }
@@ -35,6 +49,7 @@ public class Drug : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             Drugged = true;
+            DrugMusic.Play();
             this.gameObject.transform.localScale = new Vector3(0, 0, 0);
         }
        
