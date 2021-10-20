@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spikes_damage : MonoBehaviour
+public class Teleport : MonoBehaviour
 {
-    public Health playerHealth;
-    public float damageTaken = 50f;
-    public Collider triggerZone;
+    public Transform cp_loc;
+    public PlayerCharacterController player;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +20,9 @@ public class Spikes_damage : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
-        {
-            playerHealth.TakeDamage(damageTaken, this.gameObject);
+        if(other.gameObject.tag == "Player"){
+            player.transform.position = cp_loc.transform.position;
+            print("teleport");
         }
     }
 }

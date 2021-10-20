@@ -11,6 +11,8 @@ using UnityEngine;
         float melted_signal = 1f;
 
         public GameObject melting_object;
+
+        public AudioSource PuzzleSolvedSFX;
         Vector3 scaleChange;
         Vector3 pos;
         float yPos;
@@ -31,7 +33,8 @@ using UnityEngine;
         {
             if (melting && melted_signal > 0f)
             {
-                Debug.Log("Object is metling");
+                //Debug.Log("Object is metling");
+                PuzzleSolvedSFX.Play();
                 melting_object.transform.localScale += scaleChange;
                 melting_object.transform.position -= pos;
                 melted_signal = melting_object.transform.localScale.x;
@@ -39,6 +42,7 @@ using UnityEngine;
             }
             else if (melting && melted_signal <= 0f)
             {
+                
                 Destroy(melting_object);
                 melting = false;
             }
