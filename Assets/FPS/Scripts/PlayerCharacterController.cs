@@ -10,6 +10,9 @@ public class PlayerCharacterController : MonoBehaviour
     [Tooltip("Audio source for footsteps, jump, etc...")]
     public AudioSource audioSource;
 
+    [Header("Checkpoints")]
+    public Transform cp1_loc;
+
     [Header("General")]
     [Tooltip("Force applied downward when in the air")]
     public float gravityDownForce = 20f;
@@ -144,6 +147,13 @@ public class PlayerCharacterController : MonoBehaviour
         // force the crouch state to false when starting
         SetCrouchingState(false, true);
         UpdateCharacterHeight(true);
+
+        if(cp1_loc != null){
+            if(Checkpoint.hasReached[1]){
+                print("respawn at checkpoint");
+                this.transform.position = cp1_loc.transform.position;
+            }
+       }
     }
 
     void Update()
