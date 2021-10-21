@@ -30,7 +30,6 @@ public class doorController : MonoBehaviour
 
     public void activate()
     {
-        Debug.Log("got Door to animate");
         anim.SetTrigger("ToggleHit");
     }
 }

@@ -10,6 +10,11 @@ public class PlayerCharacterController : MonoBehaviour
     [Tooltip("Audio source for footsteps, jump, etc...")]
     public AudioSource audioSource;
 
+    [Header("Checkpoints")]
+    public Transform cp1_loc;
+    public Transform cp2_loc;
+    public Transform cp3_loc;
+
     [Header("General")]
     [Tooltip("Force applied downward when in the air")]
     public float gravityDownForce = 20f;
@@ -144,6 +149,24 @@ public class PlayerCharacterController : MonoBehaviour
         // force the crouch state to false when starting
         SetCrouchingState(false, true);
         UpdateCharacterHeight(true);
+
+        if(cp1_loc != null){
+            if(Checkpoint.hasReached[1]){
+                this.transform.position = cp1_loc.transform.position;
+            }
+        }
+
+        if(cp2_loc != null){
+            if(Checkpoint.hasReached[2]){
+                this.transform.position = cp2_loc.transform.position;
+            }
+        }
+
+        if(cp3_loc != null){
+            if(Checkpoint.hasReached[3]){
+                this.transform.position = cp3_loc.transform.position;
+            }
+        }                
     }
 
     void Update()
@@ -192,7 +215,7 @@ public class PlayerCharacterController : MonoBehaviour
     }
 
     void OnDie()
-    {
+    {     
         isDead = true;
 
         // Tell the weapons manager to switch to a non-existing weapon in order to lower the weapon
