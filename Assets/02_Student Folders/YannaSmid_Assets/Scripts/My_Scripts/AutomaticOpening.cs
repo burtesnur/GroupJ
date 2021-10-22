@@ -8,9 +8,10 @@ public class AutomaticOpening : MonoBehaviour
     public float speed = 2f;
 
     bool isOpen = false;
-    bool isClosed = true;
+    public bool isClosed = true;
     bool opening = false;
     bool closing = false;
+    public bool BossFight = false;
 
     float timer;
     public float timerlength = 1f;
@@ -26,7 +27,7 @@ public class AutomaticOpening : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
+        
     }
 
     // Update is called once per frame
@@ -70,7 +71,7 @@ public class AutomaticOpening : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if (isClosed)
+        if (isClosed && !BossFight)
         {
             isClosed = false;
             timer = timerlength;

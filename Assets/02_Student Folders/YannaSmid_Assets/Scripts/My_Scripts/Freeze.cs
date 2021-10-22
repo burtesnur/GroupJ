@@ -12,16 +12,17 @@ using UnityEngine;
 
         public bool isFrozen = false;
        
-        public Collider TriggerZone;
+        //public Collider TriggerZone;
 
         public AudioSource freezingSFX;
-
-        private PlayerCharacterController Frozen;
+        public Transform IceObstacles;
+        public PlayerCharacterController s_Player;
 
         // Start is called before the first frame update
         void Start()
         {
-            TriggerZone = GetComponent<Collider>();
+            s_Player = GetComponent<PlayerCharacterController>();
+            //TriggerZone = GetComponent<Collider>();
         }
 
         // Update is called once per frame
@@ -36,16 +37,16 @@ using UnityEngine;
 
         void OnTriggerEnter(Collider other)
         {
-            Frozen = other.GetComponent<PlayerCharacterController>();
+            //Frozen = other.GetComponent<PlayerCharacterController>();
             
-            if (Frozen == null) return;
+            //if (Frozen == null) return;
 
-            if (!isFrozen)
+            if (!isFrozen && other.transform.parent == IceObstacles)
             {
                 freezingSFX.Play();
                 isFrozen = true;
                 FrozenTimer = TimerLength;
-                Frozen.enabled = false;
+                s_Player.enabled = false;
             }
         }
 
@@ -55,7 +56,7 @@ using UnityEngine;
             {
                 Debug.Log("Freeze B*tch");
                 isFrozen = false;
-                Frozen.enabled = true;
+                s_Player.enabled = true;
             }
         }
 
