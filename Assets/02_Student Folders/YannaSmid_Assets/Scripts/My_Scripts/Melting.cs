@@ -8,6 +8,7 @@ using UnityEngine;
         int number = 3;
         public float melting_speed = 1f;
         public bool melting = false;
+        private bool playSound = false;
         float melted_signal = 1f;
 
         public GameObject melting_object;
@@ -18,7 +19,6 @@ using UnityEngine;
         float yPos;
 
         public Collider triggerZone;
-
 
         // Start is called before the first frame update
         void Start()
@@ -34,7 +34,12 @@ using UnityEngine;
             if (melting && melted_signal > 0f)
             {
                 //Debug.Log("Object is metling");
-                PuzzleSolvedSFX.Play();
+                if ((melting_object.name == "IceObstacle1" || melting_object.name == "IceObstacle2") && !playSound)
+                {
+                    PuzzleSolvedSFX.Play();
+                    playSound = true;
+                    //Debug.Log("Problem solved");
+                }
                 melting_object.transform.localScale += scaleChange;
                 melting_object.transform.position -= pos;
                 melted_signal = melting_object.transform.localScale.x;
