@@ -7,6 +7,7 @@ public class BossDoor : MonoBehaviour
     AutomaticOpening DoorOpening;
     public Transform Doors;
     public Collider TriggerZone;
+    
     // Start is called before the first frame update
     void Start()
     {
