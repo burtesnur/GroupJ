@@ -151,19 +151,19 @@ public class PlayerCharacterController : MonoBehaviour
         UpdateCharacterHeight(true);
 
         if(cp1_loc != null){
-            if(Checkpoint.hasReached[1]){
+            if(Checkpoint.hasReached[0]){
                 this.transform.position = cp1_loc.transform.position;
             }
         }
 
         if(cp2_loc != null){
-            if(Checkpoint.hasReached[2]){
+            if(Checkpoint.hasReached[1]){
                 this.transform.position = cp2_loc.transform.position;
             }
         }
 
         if(cp3_loc != null){
-            if(Checkpoint.hasReached[3]){
+            if(Checkpoint.hasReached[2]){
                 this.transform.position = cp3_loc.transform.position;
             }
         }                
