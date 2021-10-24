@@ -97,7 +97,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055246761355575399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.101, z: 0}
+  m_LocalPosition: {x: 0, y: 1.493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2517379088827036479}
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27364eefd6dd0341ba72a3bfc0d9727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 400
+  maxHealth: 1000
   criticalHealthRatio: 0.3
 --- !u!114 &3464315327790461765
 MonoBehaviour:
@@ -309,8 +309,8 @@ MonoBehaviour:
   turretPivot: {fileID: 7886326314632062837}
   turretAimPoint: {fileID: 6571005840976436832}
   animator: {fileID: 7886326314639247517}
-  aimRotationSharpness: 5
-  lookAtRotationSharpness: 2.5
+  aimRotationSharpness: 10
+  lookAtRotationSharpness: 5
   detectionFireDelay: 1.1
   aimingTransitionBlendTime: 1
   randomHitSparks:
