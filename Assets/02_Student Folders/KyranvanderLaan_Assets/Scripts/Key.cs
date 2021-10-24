@@ -10,19 +10,21 @@ public class Key : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponent<PlayerCharacterController>();
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if(this.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player")
         {
+            print("Key");
             player.keyHold = true;
             Destroy(this.gameObject);
         }
