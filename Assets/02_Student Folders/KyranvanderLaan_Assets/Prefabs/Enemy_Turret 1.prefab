@@ -97,7 +97,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055246761355575399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.101, z: 0}
+  m_LocalPosition: {x: 0, y: 1.493, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2517379088827036479}
@@ -259,8 +259,9 @@ MonoBehaviour:
   deathVFX: {fileID: 8950624839484268180, guid: 45ce85b82008be84287f2c7e5bf07647,
     type: 3}
   deathVFXSpawnPoint: {fileID: 7886326314632062837}
-  lootPrefab: {fileID: 0}
-  dropRate: 0
+  lootPrefab: {fileID: 1278043600157640542, guid: fe5700b298fd9d545a4c8963dc861249,
+    type: 3}
+  dropRate: 1
   pathReachingRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   attackRangeColor: {r: 1, g: 0, b: 0, a: 1}
   detectionRangeColor: {r: 0, g: 0, b: 1, a: 1}
@@ -276,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27364eefd6dd0341ba72a3bfc0d9727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 400
+  maxHealth: 1000
   criticalHealthRatio: 0.3
 --- !u!114 &3464315327790461765
 MonoBehaviour:
@@ -293,7 +294,7 @@ MonoBehaviour:
   health: {fileID: 6370966072896210225}
   healthBarImage: {fileID: 5299349968446827641}
   healthBarPivot: {fileID: 1695247527468583575}
-  hideFullHealthBar: 1
+  hideFullHealthBar: 0
 --- !u!114 &4234830436940505133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,8 +310,8 @@ MonoBehaviour:
   turretPivot: {fileID: 7886326314632062837}
   turretAimPoint: {fileID: 6571005840976436832}
   animator: {fileID: 7886326314639247517}
-  aimRotationSharpness: 5
-  lookAtRotationSharpness: 2.5
+  aimRotationSharpness: 10
+  lookAtRotationSharpness: 5
   detectionFireDelay: 1.1
   aimingTransitionBlendTime: 1
   randomHitSparks:
@@ -686,7 +687,7 @@ MonoBehaviour:
   weaponRoot: {fileID: 8815063736924141185}
   weaponMuzzle: {fileID: 2096565386399891227}
   shootType: 1
-  projectilePrefab: {fileID: 528546716365072993, guid: 154bfb4989fe16d439e8f3fb7c20b72b,
+  projectilePrefab: {fileID: 528546716365072993, guid: 9d846131d5ac5ae4e84e689606f6b75c,
     type: 3}
   delayBetweenShots: 0.06
   bulletSpreadAngle: 0
