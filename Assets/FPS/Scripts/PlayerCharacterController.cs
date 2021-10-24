@@ -15,6 +15,8 @@ public class PlayerCharacterController : MonoBehaviour
     public Transform cp2_loc;
     public Transform cp3_loc;
 
+    public bool keyHold = false;
+
     [Header("General")]
     [Tooltip("Force applied downward when in the air")]
     public float gravityDownForce = 20f;
