@@ -24,7 +24,7 @@ public class BossDoorReenter : MonoBehaviour
     {
         if (DoorOpening.BossFight)
         {
-            Debug.Log("Backtrack");
+            //Debug.Log("Backtrack");
             DoorOpening.BossFight = false;
         }
     }

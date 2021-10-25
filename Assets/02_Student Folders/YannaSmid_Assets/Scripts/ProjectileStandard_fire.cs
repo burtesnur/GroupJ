@@ -206,7 +206,7 @@ public class ProjectileStandard_fire : MonoBehaviour
         //Melt target
         if (collider.gameObject.tag == "Meltable" && impactVFX.name == "Flames")
             {
-                Debug.Log("Target is meltable");
+                //Debug.Log("Target is meltable");
                 Melting canMelt = collider.GetComponent<Melting>();
                 canMelt.melting = true;
             }
