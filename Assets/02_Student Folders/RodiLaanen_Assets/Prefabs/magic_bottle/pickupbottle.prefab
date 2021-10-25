@@ -109,6 +109,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc7d88ce8461b348a5f2b2cbdeb84d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pcc: {fileID: 0}
+  pickBottle: {fileID: 0}
+  pc: {fileID: 0}
+  includeChildren: 1
+  jumpHigh: 0
+  inAirTimer: 0.1
+  counter: 0
+  flyCounter: 0
+  fly: 0
+  zeroGrav: 0
+  playerCurrenty: 0
 --- !u!1 &7296493021711450243
 GameObject:
   m_ObjectHideFlags: 0
@@ -4939,7 +4950,7 @@ ParticleSystemRenderer:
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00030409
+  m_VertexStreams: 000304
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
