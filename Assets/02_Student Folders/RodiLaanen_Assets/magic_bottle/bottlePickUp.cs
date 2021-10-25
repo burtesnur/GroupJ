@@ -9,6 +9,7 @@ public class bottlePickUp : MonoBehaviour
     public Collider pickBottle;
     public AudioSource floating;
     public ParticleSystem pc;
+    public GameObject lootPrefab;
     public bool includeChildren = true;
     public bool jumpHigh = false;
     public float inAirTimer = 0.1f;
@@ -73,6 +74,7 @@ public class bottlePickUp : MonoBehaviour
                 pcc.gravityDownForce = 25f;
                 jumpHigh = !jumpHigh;
                 floating.Stop();
+                Instantiate(lootPrefab, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
 
             }
