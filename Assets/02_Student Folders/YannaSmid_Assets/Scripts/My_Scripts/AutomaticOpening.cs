@@ -71,7 +71,7 @@ public class AutomaticOpening : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if (isClosed && !BossFight)
+        if (isClosed && (!BossFight))
         {
             isClosed = false;
             timer = timerlength;

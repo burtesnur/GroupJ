@@ -54,7 +54,7 @@ using UnityEngine;
         {
             if (isFrozen && FrozenTimer <= 0f)
             {
-                Debug.Log("Freeze B*tch");
+                //Debug.Log("Freeze B*tch");
                 isFrozen = false;
                 s_Player.enabled = true;
             }
