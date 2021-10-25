@@ -19,18 +19,22 @@ public class IceFloor : MonoBehaviour
     {
         
     }
-
-    void OnTriggerEnter (Collider other)
+    void OnTriggerStay (Collider other)
     {
         playerDetected = other.GetComponent<PlayerCharacterController>();
 
         if (!sPlayer.slippery)
         {
             if (playerDetected == null) return;
-            //Debug.Log("It's slippery!");
+            Debug.Log("It's slippery!");
             sPlayer.slippery = true;
         }
     }
+
+    // void OnTriggerEnter (Collider other)
+    // {
+   
+    // }
 
     void OnTriggerExit (Collider other)
     {
