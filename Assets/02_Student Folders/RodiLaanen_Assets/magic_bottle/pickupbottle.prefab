@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2620131183356007197}
   - component: {fileID: 2620131183356007194}
   - component: {fileID: 2620131183356007195}
-  - component: {fileID: 2880464175736273948}
+  - component: {fileID: 3599078713320984548}
   m_Layer: 0
   m_Name: pickupbottle
   m_TagString: Untagged
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 40
---- !u!114 &2880464175736273948
+--- !u!114 &3599078713320984548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,21 +106,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2620131183356007192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc7d88ce8461b348a5f2b2cbdeb84d6, type: 3}
+  m_Script: {fileID: 11500000, guid: ec85fefdef1db124c8ab721ff3b67f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pcc: {fileID: 0}
-  pickBottle: {fileID: 0}
-  floating: {fileID: 0}
-  pc: {fileID: 0}
-  includeChildren: 1
-  jumpHigh: 0
-  inAirTimer: 0.1
-  counter: 0
-  flyCounter: 0
-  fly: 0
-  zeroGrav: 0
-  playerCurrenty: 0
 --- !u!1 &7296493021711450243
 GameObject:
   m_ObjectHideFlags: 0
