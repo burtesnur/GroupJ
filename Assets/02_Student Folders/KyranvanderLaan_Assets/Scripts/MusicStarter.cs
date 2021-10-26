@@ -6,7 +6,11 @@ public class MusicStarter : MonoBehaviour
 {
     public AudioSource audiosource1;
     public AudioSource audiosource2;
+    public AudioSource audiosource3;
+    public GameObject boss; 
     public static int musicID;
+
+    private bool Completed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,13 @@ public class MusicStarter : MonoBehaviour
                 audiosource1.Stop();
             }
             audiosource2.Play();
+        }
+        if(boss == null){
+            audiosource2.Stop();
+            if(!audiosource3.isPlaying && !Completed){
+                Completed = true;
+                audiosource3.Play();
+            }
         }
     }
 }
