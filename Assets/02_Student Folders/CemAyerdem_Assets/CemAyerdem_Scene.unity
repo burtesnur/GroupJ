@@ -2187,7 +2187,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-145800
+  m_Name: pb_Mesh-32698
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2527,7 +2527,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lootPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1422821399}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e29d43f43cc5d82499dd9926e01847d3, type: 3}
 --- !u!4 &167105328 stripped
@@ -8429,7 +8429,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-149010
+  m_Name: pb_Mesh-35908
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8702,7 +8702,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-148844
+  m_Name: pb_Mesh-35742
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11849,7 +11849,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-115844
+  m_Name: pb_Mesh-2742
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12013,7 +12013,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-142822
+  m_Name: pb_Mesh-29720
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15097,7 +15097,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-116656
+  m_Name: pb_Mesh-3554
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21118,6 +21118,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1755627346}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1422821399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8200220640316782922, guid: d771f03a2656e194fba5a444d5a3d9e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1968809357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1424898846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21394,7 +21400,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-149784
+  m_Name: pb_Mesh-36682
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21564,7 +21570,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-130626
+  m_Name: pb_Mesh-17524
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29549,7 +29555,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-140370
+  m_Name: pb_Mesh-27268
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30413,15 +30419,15 @@ TextMesh:
   m_GameObject: {fileID: 1993520818}
   m_Text: 'Good day explorer!
 
-    Welcome too my small maze
+    Welcome too my small maze where the sky is the
+    limit!
 
-    Items can be picked
-    up by simply walking through them
+    Items can be picked up by simply walking through them
 
-    Some items are hidden, so check every
-    corner!
+    Some items
+    are hidden, so check every corner!
 
-    oh, and watchout  for enemies'
+    oh, and keep an eye out for enemies'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -31160,7 +31166,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-126860
+  m_Name: pb_Mesh-13758
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
