@@ -34,7 +34,7 @@ public class SwipeRightArm : MonoBehaviour
 			int bar = Random.Range(0,1000);
 			if (bar < 100) {
 				Busy = true;
-				if (bar > 120){
+				if (bar > 50){
 					Swipe = true;
 					Trigger = true;
 				} else {
