@@ -4,23 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/01_Menu/MainMenuScene.unity
-    guid: 0ffac6132adb54714954003a60f4f424
-  - enabled: 1
-    path: Assets/02_Student Folders/CemAyerdem_Assets/CemAyerdem_Scene.unity
-    guid: b1c142bc2b0be0d498dc1057d296d826
-  - enabled: 1
-    path: Assets/02_Student Folders/MartNiewandt_Assets/MartNiewandt_Scene.unity
-    guid: e5242e945070eb041aaaf54d516bc5ec
-  - enabled: 1
-    path: Assets/02_Student Folders/ChikaOpdam_Assets/ChikaOpdam_Scene.unity
-    guid: 875f285eded0c0e49bc3efbc18111d99
-  - enabled: 1
-    path: Assets/02_Student Folders/YannaSmid_Assets/YannaSmid_Scene.unity
-    guid: aec4be31677347b45a9d750f0c3ec87b
-  - enabled: 1
-    path: Assets/02_Student Folders/KyranvanderLaan_Assets/KyranvanderLaan_Scene.unity
-    guid: 58580080df6b0d0449d2c890b3e05d7c
+  m_Scenes: []
   m_configObjects: {}

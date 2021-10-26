@@ -19,8 +19,7 @@ public class IceFloor : MonoBehaviour
     {
         
     }
-
-    void OnTriggerEnter (Collider other)
+    void OnTriggerStay (Collider other)
     {
         playerDetected = other.GetComponent<PlayerCharacterController>();
 
@@ -32,11 +31,16 @@ public class IceFloor : MonoBehaviour
         }
     }
 
+    // void OnTriggerEnter (Collider other)
+    // {
+   
+    // }
+
     void OnTriggerExit (Collider other)
     {
         if (sPlayer.slippery)
         {
-            Debug.Log("Normal again");
+            //Debug.Log("Normal again");
             sPlayer.slippery = false;
         }
     }
