@@ -8280,18 +8280,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 669085934}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &669609074 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 814417836257332542, guid: 761cdc9e4e883334cbdcea062d0befa7,
-    type: 3}
-  m_PrefabInstance: {fileID: 2041547763}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e9b849ae2755b428b23edfa9686c79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &676604064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22494,8 +22482,8 @@ GameObject:
   - component: {fileID: 1562305774}
   - component: {fileID: 1562305773}
   - component: {fileID: 1562305772}
+  - component: {fileID: 1562305771}
   - component: {fileID: 1562305770}
-  - component: {fileID: 1562305776}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -22519,6 +22507,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1562305771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562305769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa34dbe18dfb8194bb4a38ce88f523cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceheight: 4192
 --- !u!65 &1562305772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22527,7 +22528,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562305769}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -22595,20 +22596,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1562305776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562305769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff9f0f3e93939804a8e6071f308456cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 669609074}
-  jumpforce: 20
 --- !u!4 &1565497190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2078877896268657686, guid: 22ee8966e4c728a418415db5731c87ae,
