@@ -26,7 +26,7 @@ public class IceFloor : MonoBehaviour
         if (!sPlayer.slippery)
         {
             if (playerDetected == null) return;
-            Debug.Log("It's slippery!");
+            //Debug.Log("It's slippery!");
             sPlayer.slippery = true;
         }
     }
@@ -40,7 +40,7 @@ public class IceFloor : MonoBehaviour
     {
         if (sPlayer.slippery)
         {
-            Debug.Log("Normal again");
+            //Debug.Log("Normal again");
             sPlayer.slippery = false;
         }
     }

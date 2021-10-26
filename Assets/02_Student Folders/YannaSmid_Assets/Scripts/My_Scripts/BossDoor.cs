@@ -29,7 +29,7 @@ public class BossDoor : MonoBehaviour
         if (!DoorOpening.BossFight)
         {
             
-            Debug.Log("Baby let the games begin");
+            //Debug.Log("Baby let the games begin");
             DoorOpening.BossFight = true;
         }
     }
