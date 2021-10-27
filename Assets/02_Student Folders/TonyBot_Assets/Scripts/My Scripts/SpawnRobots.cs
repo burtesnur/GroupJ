@@ -6,10 +6,14 @@ public class SpawnRobots : MonoBehaviour
 {
 	
 	public DetectionModule detect;
-	bool OutRange = true;
+	public float speed;
 	int i = 0;
+	public Transform Walls;
 	public GameObject RobotPrefab;
 	public Vector3 SpawnPoint;
+	List<GameObject> enemies = new List<GameObject>();
+	bool PlayerDetected = false;
+	bool OutRange;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +23,13 @@ public class SpawnRobots : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (detect.isTargetInAttackRange != null){
-			OutRange = !detect.isTargetInAttackRange;
+		
+		OutRange = !detect.isTargetInAttackRange;
+		if (detect.hadKnownTarget){
+			PlayerDetected = true;
 		}
-        if (detect.knownDetectedTarget != null) {
+        if (PlayerDetected) {
+			CloseWalls();
 			if (OutRange){
 				SpawnRobot();
 			}
@@ -30,11 +37,21 @@ public class SpawnRobots : MonoBehaviour
     }
 	
 	void SpawnRobot(){
-		if (i < 300) {
+		
+		if (i < 1800) {
 			i++;
 			return;
+			
 		}
 		i = 0;
-		Instantiate(RobotPrefab, SpawnPoint, Quaternion.identity);
+		if (enemies.Count < 4)
+			enemies.Add(Instantiate(RobotPrefab, SpawnPoint, Quaternion.identity));
+	}
+	
+	void CloseWalls(){
+		if (Walls.position.y < 10)
+			Walls.position = Walls.position + new Vector3(0, Time.deltaTime*speed, 0) ;
+		if (Walls.localScale.x > 1)
+			Walls.localScale = Walls.localScale + new Vector3(-Time.deltaTime*speed, 0 , -Time.deltaTime*speed);
 	}
 }
