@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class bottle_type_2 : MonoBehaviour
 {
-  public PlayerCharacterController pcc;
+    public PlayerCharacterController pcc;
     public Collider pickBottle;
     public AudioSource floatingMusic;
     public GameObject newBottle;
     public ParticleSystem pc;
-    public bool particleChildren, fly, zeroGrav, jumpPower;
-    private float flyTime, jumpTime, jumpTimer, flyTimer, playerCurrenty;
+    bool particleChildren, fly, zeroGrav, jumpPower;
+    float flyTime, jumpTime, jumpTimer, flyTimer, playerCurrenty;
 
     void Start()
     {
@@ -20,8 +20,8 @@ public class bottle_type_2 : MonoBehaviour
         fly = false;
         zeroGrav = false;
         jumpPower = false;
-        flyTime = 1.0f;
-        jumpTime = 8.0f;
+        flyTime = 0.8f;
+        jumpTime = 12.0f;
         jumpTimer = 0.0f;
         flyTimer = 0.0f; 
     }
