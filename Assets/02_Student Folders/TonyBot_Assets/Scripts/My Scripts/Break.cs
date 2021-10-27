@@ -9,6 +9,7 @@ public class Break : MonoBehaviour
 	public Transform negZ;
 	public Transform posZ;
 	bool Trigger = false;
+	public AudioSource breakSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,11 @@ public class Break : MonoBehaviour
 	
 	void OnTriggerEnter (Collider other){
 		CharacterController player = other.GetComponent<CharacterController>();
-		if (player != null) Trigger = true;
+		if (!Trigger)
+			breakSound.Play();
+		if (player != null)
+			Trigger = true;
+		
 	}
 	
 	void Collapse(){
