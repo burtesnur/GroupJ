@@ -81,7 +81,6 @@ public class DblJump : MonoBehaviour
         if(DblJumpIsInUse && !used_DblJump)
         {
             used_DblJump = true;
-            // store the last time of use for refill delay
             m_LastTimeOfUse = Time.time;
 
             float totalAcceleration = DblJumpAcceleration;
@@ -97,9 +96,6 @@ public class DblJump : MonoBehaviour
 
             // apply the acceleration to character's velocity
             m_PlayerCharacterController.characterVelocity += Vector3.up * totalAcceleration;
-
-            // consume fuel
-            //currentFillRatio = currentFillRatio - (Time.deltaTime / consumeDuration);
 
             for (int i = 0; i < DblJumpVfx.Length; i++)
             {
