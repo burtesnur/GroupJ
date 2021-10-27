@@ -9,8 +9,8 @@ public class bottle_type_1 : MonoBehaviour
     public AudioSource floatingMusic;
     public GameObject newBottle;
     public ParticleSystem pc;
-    public bool particleChildren, fly, zeroGrav, jumpPower;
-    private float flyTime, jumpTime, jumpTimer, flyTimer, playerCurrenty;
+    bool particleChildren, fly, zeroGrav, jumpPower;
+    float flyTime, jumpTime, jumpTimer, flyTimer, playerCurrenty;
 
     void Start()
     {
