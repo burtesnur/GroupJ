@@ -24,9 +24,7 @@ public class puzzleswitchParent : MonoBehaviour
 			print("allhit");
         }
         if(shouldMove && timer > 0f){
-            //presser.Translate(0, 0, -Time.deltaTime * 2f);
-			Destroy(presser);
-			//presser.position = presser.position + new Vector3(0, -Time.deltaTime*5f, 0);
+            Destroy(presser);
             timer -= Time.deltaTime;
 			print("shouldmove");
         }else{

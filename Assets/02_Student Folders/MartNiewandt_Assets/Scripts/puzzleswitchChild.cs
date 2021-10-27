@@ -5,7 +5,6 @@ using UnityEngine;
 public class puzzleswitchChild : MonoBehaviour
 {
     public GameObject button;
-    public Light lt;
 
     public bool childhit = false;
     //bool ishit = false;
@@ -14,7 +13,6 @@ public class puzzleswitchChild : MonoBehaviour
     {
         var buttonRenderer = button.GetComponent<Renderer>(); 
         buttonRenderer.material.SetColor("_Color", Color.green);
-        //lt.color = Color.green;
     }
 
     // Update is called once per frame
@@ -23,11 +21,7 @@ public class puzzleswitchChild : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other)
-    {
-        var buttonRenderer = button.GetComponent<Renderer>(); 
+    { 
         childhit = true;
-        //ishit = true;
-        //lt.color = Color.green;
-        buttonRenderer.material.SetColor("_Color", Color.green); 
     }
 }
